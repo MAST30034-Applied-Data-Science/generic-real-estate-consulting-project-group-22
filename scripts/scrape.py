@@ -75,30 +75,7 @@ for property_url in url_links[1:]:
             ).attrs["href"],
         )[0].split(",")
     ]
-
-
-    attr_dict = [feature.text for feature in bs_object.find("div", {"data-testid": "property-features"}\
-        ).findAll("span", {"data-testid": "property-features-text-container"})]
-    if attr_dict == []:
-        property_metadata[property_url]["rooms"] = 'null'
-        property_metadata[property_url]["baths"] = 'null'
-        property_metadata[property_url]["parking"] = 'null'
-        property_metadata[property_url]["area"] = 'null'
-    else:
-        property_metadata[property_url]["rooms"] = re.findall(r"\d\s[A-Za-z]+", attr_dict[0])
-        property_metadata[property_url]["baths"] = re.findall(r"\d\s[A-Za-z]+", attr_dict[1])
-        property_metadata[property_url]["parking"] = re.findall(r"\d\s[A-Za-z]+", attr_dict[2])
-        if len(attr_dict) == 4:
-            property_metadata[property_url]["area"] = attr_dict[3]
     
-    
-
-    property_metadata[property_url]["rooms"] = [
-        re.findall(r"\d\s[A-Za-z]+", feature.text)[0]
-        for feature in bs_object.find(
-            "div", {"data-testid": "property-features"}
-        ).findAll("span", {"data-testid": "property-features-text-container"})
-    ]
 
     attr_dict = [feature.text for feature in bs_object \
             .find("div", {"data-testid": "property-features"}) \
