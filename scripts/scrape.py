@@ -11,7 +11,10 @@ from collections import defaultdict
 from json import dump
 from pprint import pprint
 from urllib.request import urlopen
+<<<<<<< HEAD
 from xml.dom.minidom import Attr
+=======
+>>>>>>> dc94e173ce2a17e16daf60fa44f9a7f17c81a0ed
 
 import requests
 
@@ -22,7 +25,11 @@ from bs4 import BeautifulSoup
 BASE_URL = "https://www.domain.com.au"
 N_PAGES = range(1, 51)  # update this to your liking
 headers = {
+<<<<<<< HEAD
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+=======
+    "User-Agent": "Mozilla/5.0 (X11; CrOS x86_64 12871.102.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.141 Safari/537.36"
+>>>>>>> dc94e173ce2a17e16daf60fa44f9a7f17c81a0ed
 }
 
 # begin code
@@ -45,6 +52,7 @@ for page in N_PAGES:
         if "address" in link["class"]:
             url_links.append(link["href"])
 
+pprint(url_links)
 
 # for each url, scrape some basic metadata
 for property_url in url_links[1:]:
@@ -75,6 +83,7 @@ for property_url in url_links[1:]:
         )[0].split(",")
     ]
 
+<<<<<<< HEAD
     attr_dict = [feature.text for feature in bs_object.find("div", {"data-testid": "property-features"}\
         ).findAll("span", {"data-testid": "property-features-text-container"})]
     if attr_dict == []:
@@ -90,6 +99,15 @@ for property_url in url_links[1:]:
             property_metadata[property_url]["area"] = attr_dict[3]
     
     
+=======
+    property_metadata[property_url]["rooms"] = [
+        re.findall(r"\d\s[A-Za-z]+", feature.text)[0]
+        for feature in bs_object.find(
+            "div", {"data-testid": "property-features"}
+        ).findAll("span", {"data-testid": "property-features-text-container"})
+    ]
+
+>>>>>>> dc94e173ce2a17e16daf60fa44f9a7f17c81a0ed
     property_metadata[property_url]["desc"] = re.sub(
         r"<br\/>", "\n", str(bs_object.find("p"))
     ).strip("</p>")
