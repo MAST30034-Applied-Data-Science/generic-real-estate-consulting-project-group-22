@@ -1,17 +1,8 @@
 #package to request data
 from urllib.request import urlretrieve
-
-
 import os
 
-
-
-
-
 raw_data_dir='../data/raw/'
-
-
-
 
 # download population dataset
 url= f"https://www.abs.gov.au/statistics/people/population/regional-population/2021/32180DS0001_2001-21.xlsx"
