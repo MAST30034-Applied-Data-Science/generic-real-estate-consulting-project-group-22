@@ -21,7 +21,7 @@ from bs4 import BeautifulSoup
 
 # constants
 BASE_URL = "https://www.domain.com.au"
-N_PAGES = range(1, 51)  # update this to your liking
+N_PAGES = range(1, 3)  # update this to your liking
 headers = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
 }
@@ -32,6 +32,7 @@ property_metadata = defaultdict(dict)
 
 # generate list of urls to visit
 for page in N_PAGES:
+    print(page)
     url = BASE_URL + f"/rent/melbourne-region-vic/?sort=price-desc&page={page}"
     bs_object = BeautifulSoup(requests.get(url, headers=headers).text, "html.parser")
 
@@ -97,6 +98,9 @@ for property_url in url_links[1:]:
     property_metadata[property_url]["desc"] = re.sub(
         r"<br\/>", "\n", str(bs_object.find("p"))
     ).strip("</p>")
+
+
+
 
 # output to example json in data/raw/
 with open("../data/raw/example.json", "w") as f:

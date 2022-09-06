@@ -4,7 +4,7 @@ import os
 
 
 urlretrieve= urllib.request.urlretrieve
-raw_data_dir='data/raw/'
+raw_data_dir='../data/raw/'
 
 # download population dataset
 url= f"https://www.abs.gov.au/statistics/people/population/regional-population/2021/32180DS0001_2001-21.xlsx"
@@ -42,7 +42,8 @@ urlretrieve(url,output_dir)
 
 print("end postcode")
 
-
+dir_path = os.path.dirname(os.path.realpath(__file__))
+print(dir_path)
 
 
 
