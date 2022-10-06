@@ -1,2 +1,12 @@
 # Generic Real Estate Consulting Project
-Groups should generate their own suitable `README.md`.
+
+- Team Number: 22
+- Team Members:
+
+
+**Research Goal:** 
+
+**Timeline:** 
+
+To run the pipeline, please visit the `scripts` directory and run the files in order:
+1. 
