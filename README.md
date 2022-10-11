@@ -98,8 +98,9 @@ Our project aims to predict rental prices of properties across Victoria for the 
 4. run ```income_unemployment_predict.ipynb```, analyze and predict the number of jobs, income rate, and unemployment rate of each suburb.
 5. run ```linear_predict.ipynb``` to predict suburb with highest rent price growth with linear model
 6. run ```rf-model.ipynb``` to predict suburb with highest rent price growth with random forest
-7. run ```livable_suburb.ipynb``` to find most livable suburbs
-8. run ```affordable_suburb.ipynb``` to find most affordable suburbs
-9. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
+7. run ```livable_suburb_avg.ipynb``` to find most livable suburbs
+8. run ```livable_suburb_rank.ipynb``` to find most livable suburbs
+9. run ```affordable_suburb.ipynb``` to find most affordable suburbs
+10. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
 
 
