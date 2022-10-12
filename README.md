@@ -101,6 +101,7 @@ Our project aims to predict rental prices of properties across Victoria for the 
 7. run ```livable_suburb_avg.ipynb``` to find most livable suburbs
 8. run ```livable_suburb_rank.ipynb``` to find most livable suburbs
 9. run ```affordable_suburb.ipynb``` to find most affordable suburbs
-10. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
+10. run ```rent_all.ipynb``` to find the mean rental price of each SA2
+11. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
 
 
