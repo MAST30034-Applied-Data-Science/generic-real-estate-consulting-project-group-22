@@ -17,9 +17,9 @@ Our project aims to predict rental prices of properties across Victoria for the 
 
 ## How to use our code
 
-**To download raw data sets, please visit the `scripts` directory and run the files in order:**
+*[google drive link](https://drive.google.com/drive/u/0/folders/1_lvU7KYgXnpoQGg10gbek75Qi1xasfza) to store some datasets*(to save time, since some data requires few hours to run notebook and get)
 
-*[google drive link](https://drive.google.com/drive/u/0/folders/1_lvU7KYgXnpoQGg10gbek75Qi1xasfza) to store some raw data*(to save time, since some data requires few hours to run notebook and get)
+**To download raw data sets, please visit the `scripts` directory and run the files in order:**
 
 1. run ```external.ipynb``` to download some external dataset
 2. run ```scrape.ipynb``` to scrape the property data from the Domain website (this would take around 2 hours to scrape, so it was added to the google drive to save the time for others. After extraction, put ```example.json``` into ```/data/raw``` directory)
