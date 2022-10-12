@@ -88,7 +88,7 @@ Our project aims to predict rental prices of properties across Victoria for the 
 	  - run ```openrouteservice_school.ipynb```
     - run ```ors_sc.ipynb```
     - run ```ors_train.ipynb```
-    - run ```property_preprocess.ipynb``` to merge route data for each property
+    - run ```property_preprocess.ipynb``` to merge route data and other external datasets for each property
 
 **To analyse and visualise our data sets, please visit the `notebooks` directory and run the files in order:**
 
