@@ -104,4 +104,6 @@ Our project aims to predict rental prices of properties across Victoria for the 
 10. run ```rent_all.ipynb``` to find the mean rental price of each SA2
 11. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
 
+**To discover our overall findings of our project, please visit the `notebooks` directory**
 
+Check ```summary.ipynb```
