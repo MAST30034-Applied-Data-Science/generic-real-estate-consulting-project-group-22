@@ -17,9 +17,9 @@ Our project aims to predict rental prices of properties across Victoria for the 
 
 ## How to use our code
 
-**To download raw data sets, please visit the `scripts` directory and run the files in order:**
+*[google drive link](https://drive.google.com/drive/u/0/folders/1_lvU7KYgXnpoQGg10gbek75Qi1xasfza) to store some datasets*(to save time, since some data requires few hours to run notebook and get)
 
-*[google drive link]() to store some raw data*(to save time, since some data requires few hours to run notebook and get)
+**To download raw data sets, please visit the `scripts` directory and run the files in order:**
 
 1. run ```external.ipynb``` to download some external dataset
 2. run ```scrape.ipynb``` to scrape the property data from the Domain website (this would take around 2 hours to scrape, so it was added to the google drive to save the time for others. After extraction, put ```example.json``` into ```/data/raw``` directory)
@@ -88,7 +88,7 @@ Our project aims to predict rental prices of properties across Victoria for the 
 	  - run ```openrouteservice_school.ipynb```
     - run ```ors_sc.ipynb```
     - run ```ors_train.ipynb```
-    - run ```property_preprocess.ipynb``` to merge route data for each property
+    - run ```property_preprocess.ipynb``` to merge route data and other external datasets for each property
 
 **To analyse and visualise our data sets, please visit the `notebooks` directory and run the files in order:**
 
@@ -98,8 +98,12 @@ Our project aims to predict rental prices of properties across Victoria for the 
 4. run ```income_unemployment_predict.ipynb```, analyze and predict the number of jobs, income rate, and unemployment rate of each suburb.
 5. run ```linear_predict.ipynb``` to predict suburb with highest rent price growth with linear model
 6. run ```rf-model.ipynb``` to predict suburb with highest rent price growth with random forest
-7. run ```livable_suburb.ipynb``` to find most livable suburbs
-8. run ```rent.ipynb``` to find most affordable suburbs
-9. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
+7. run ```livable_suburb_avg.ipynb``` to use the mean value of the distance from the property to the different public facilities as metrics to find the most livable suburb to live in
+8. run ```livable_suburb_rank.ipynb``` to use the distance ranking of properties to different public facilities as metrics to find the most livable suburb to live in
+9. run ```affordable_suburb.ipynb``` to find most affordable suburbs
+10. run ```rent_all.ipynb``` to find the mean rental price of each SA2
+11. run ```visualization.ipynb``` to draw choropleth maps to show the mean population, income, property rental price of each zone(SA2) in Victoria
 
+**To discover our overall findings of our project, please visit the `notebooks` directory**
 
+Check ```summary.ipynb```
